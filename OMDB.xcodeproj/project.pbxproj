@@ -14,6 +14,8 @@
 		903743A22731F2B90057AC6E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 903743A12731F2B90057AC6E /* FirebaseAnalytics */; };
 		903743A42731F2B90057AC6E /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 903743A32731F2B90057AC6E /* FirebaseRemoteConfig */; };
 		903743A62731F2F60057AC6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903743A52731F2F60057AC6E /* GoogleService-Info.plist */; };
+		90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3852731F83E007F538B /* ConnectivityManager.swift */; };
+		90ECA3892731F9DB007F538B /* ConnectivityManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3882731F9DB007F538B /* ConnectivityManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		903743982731EA6E0057AC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9037439A2731EA6E0057AC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		903743A52731F2F60057AC6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90ECA3852731F83E007F538B /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		90ECA3882731F9DB007F538B /* ConnectivityManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		9037438B2731EA680057AC6E /* OMDB */ = {
 			isa = PBXGroup;
 			children = (
+				90ECA3842731F7BF007F538B /* Managers */,
 				9037438C2731EA680057AC6E /* AppDelegate.swift */,
 				903743902731EA680057AC6E /* ViewController.swift */,
 				903743952731EA6E0057AC6E /* Assets.xcassets */,
@@ -66,6 +71,23 @@
 				903743A52731F2F60057AC6E /* GoogleService-Info.plist */,
 			);
 			path = OMDB;
+			sourceTree = "<group>";
+		};
+		90ECA3842731F7BF007F538B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA3872731F9C6007F538B /* ConnectivityManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		90ECA3872731F9C6007F538B /* ConnectivityManager */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA3852731F83E007F538B /* ConnectivityManager.swift */,
+				90ECA3882731F9DB007F538B /* ConnectivityManagerProtocol.swift */,
+			);
+			path = ConnectivityManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ECA3892731F9DB007F538B /* ConnectivityManagerProtocol.swift in Sources */,
 				903743912731EA680057AC6E /* ViewController.swift in Sources */,
 				9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */,
+				90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
