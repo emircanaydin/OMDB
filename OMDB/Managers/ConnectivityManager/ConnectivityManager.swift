@@ -6,24 +6,30 @@
 //
 
 import Foundation
-import Network
+import Reachability
 
 class ConnectivityManager: ConnectivityManagerProtocol {
     
     public static let shared = ConnectivityManager()
-    let monitor = NWPathMonitor()
-    
-    private init() {
-        monitor.start(queue: DispatchQueue(label: "PathMonitor"))
-    }
+    let reachability = try! Reachability()
     
     func isConnectedToInternet(with completion: @escaping BooleanBlock) {
-        monitor.pathUpdateHandler = { path in
-            completion((path.status == .satisfied) ? true : false)
+        reachability.whenReachable = { reachability in
+            completion(true)
+        }
+        
+        reachability.whenUnreachable = { reachability in
+            completion(false)
+        }
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
         }
     }
     
     func stopMonitor() {
-        monitor.cancel()
+        reachability.stopNotifier()
     }
 }

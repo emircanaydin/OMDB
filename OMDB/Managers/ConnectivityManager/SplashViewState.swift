@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+typealias SplashViewStateBlock = (SplashViewState) -> Void
+
+enum SplashViewState {
+    case noInternet
+    case loading
+    case done(String)
+}
