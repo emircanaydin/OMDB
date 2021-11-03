@@ -16,7 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        self.window = UIWindow()
+        let splashView = SplashViewBuilder.build {
+            self.initializeMainView()
+        }
+    
+        window?.rootViewController = splashView
+        window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    private func initializeMainView() {
+        DispatchQueue.main.async {
+            UIView.transition(with: self.window!, duration: 0.3, options: .transitionCrossDissolve) {
+                self.fireMainView()
+            }
+        }
+    }
+    
+    private func fireMainView() {
+//        let mainView = MainViewBuilder.build()
+//
+//        window?.rootViewController = mainView
+//        window?.makeKeyAndVisible()
     }
 }
 
