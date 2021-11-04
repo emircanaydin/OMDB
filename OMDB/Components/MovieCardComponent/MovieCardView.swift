@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCardView: GenericBaseView<MovieCardData> {
+class MovieCardView: GenericBaseView<GenericDataProtocol> {
     
     private lazy var shadowContainerView: UIView = {
         let view = UIView()

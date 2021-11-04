@@ -44,6 +44,7 @@
 		90ECA3E227336173007F538B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3E127336173007F538B /* ImageCacheManager.swift */; };
 		90ECA3E427336248007F538B /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3E327336248007F538B /* GenericCollectionViewCell.swift */; };
 		90ECA3E627336272007F538B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3E527336272007F538B /* BaseCollectionViewCell.swift */; };
+		90ECA3EA2733633E007F538B /* MovieCardDisplayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3E92733633E007F538B /* MovieCardDisplayerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		90ECA3E127336173007F538B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		90ECA3E327336248007F538B /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
 		90ECA3E527336272007F538B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		90ECA3E92733633E007F538B /* MovieCardDisplayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardDisplayerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,8 +299,17 @@
 		90ECA3E727336286007F538B /* CollectionComponent */ = {
 			isa = PBXGroup;
 			children = (
+				90ECA3E827336326007F538B /* CellComponents */,
 			);
 			path = CollectionComponent;
+			sourceTree = "<group>";
+		};
+		90ECA3E827336326007F538B /* CellComponents */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA3E92733633E007F538B /* MovieCardDisplayerCollectionViewCell.swift */,
+			);
+			path = CellComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 				90ECA39A27320F60007F538B /* BaseViewController.swift in Sources */,
 				90ECA3D427335EB8007F538B /* OMDBColor.swift in Sources */,
 				90ECA3E227336173007F538B /* ImageCacheManager.swift in Sources */,
+				90ECA3EA2733633E007F538B /* MovieCardDisplayerCollectionViewCell.swift in Sources */,
 				90ECA3DC27335F91007F538B /* CustomImageViewComponent.swift in Sources */,
 				90ECA3C927335D7A007F538B /* GenericBaseView.swift in Sources */,
 				90ECA3BB27321035007F538B /* MainFont.swift in Sources */,
