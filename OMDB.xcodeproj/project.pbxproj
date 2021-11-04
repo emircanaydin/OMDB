@@ -59,6 +59,9 @@
 		90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40927337F4B007F538B /* SearchOperationManagerProtocol.swift */; };
 		90ECA40E27338073007F538B /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40D27338073007F538B /* SearchResponseModel.swift */; };
 		90ECA41027338100007F538B /* SearchOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40F27338100007F538B /* SearchOperationManager.swift */; };
+		90ECA4132734A830007F538B /* SearchControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA4122734A830007F538B /* SearchControllerData.swift */; };
+		90ECA4152734A841007F538B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA4142734A841007F538B /* SearchController.swift */; };
+		90ECA4172734A86F007F538B /* BaseSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA4162734A86F007F538B /* BaseSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +114,9 @@
 		90ECA40927337F4B007F538B /* SearchOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManagerProtocol.swift; sourceTree = "<group>"; };
 		90ECA40D27338073007F538B /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		90ECA40F27338100007F538B /* SearchOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManager.swift; sourceTree = "<group>"; };
+		90ECA4122734A830007F538B /* SearchControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerData.swift; sourceTree = "<group>"; };
+		90ECA4142734A841007F538B /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		90ECA4162734A86F007F538B /* BaseSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,9 +233,10 @@
 			children = (
 				90ECA3CA27335D94007F538B /* BaseView.swift */,
 				90ECA39927320F60007F538B /* BaseViewController.swift */,
+				90ECA3E527336272007F538B /* BaseCollectionViewCell.swift */,
+				90ECA4162734A86F007F538B /* BaseSearchController.swift */,
 				90ECA3C827335D7A007F538B /* GenericBaseView.swift */,
 				90ECA3E327336248007F538B /* GenericCollectionViewCell.swift */,
-				90ECA3E527336272007F538B /* BaseCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 		90ECA3CC27335DAF007F538B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90ECA4112734A81E007F538B /* SearchController */,
 				90ECA3D527335F91007F538B /* CustomImageViewComponent */,
 				90ECA3CD27335DC9007F538B /* MovieCardComponent */,
 				90ECA3E727336286007F538B /* CollectionComponent */,
@@ -416,6 +424,15 @@
 			path = ResponseModels;
 			sourceTree = "<group>";
 		};
+		90ECA4112734A81E007F538B /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA4122734A830007F538B /* SearchControllerData.swift */,
+				90ECA4142734A841007F538B /* SearchController.swift */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -518,6 +535,7 @@
 				903743912731EA680057AC6E /* ViewController.swift in Sources */,
 				90ECA3DD27335F91007F538B /* CustomImageLoadingType.swift in Sources */,
 				90ECA3BE2732108A007F538B /* GenericValueProtocol.swift in Sources */,
+				90ECA4172734A86F007F538B /* BaseSearchController.swift in Sources */,
 				90ECA3E627336272007F538B /* BaseCollectionViewCell.swift in Sources */,
 				90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */,
 				90ECA39A27320F60007F538B /* BaseViewController.swift in Sources */,
@@ -535,6 +553,7 @@
 				90ECA3942732018A007F538B /* FirebaseRemoteConfigManagerProtocol.swift in Sources */,
 				90ECA3D127335E64007F538B /* MovieCardView.swift in Sources */,
 				90ECA40427337D46007F538B /* SearchRequestModel.swift in Sources */,
+				90ECA4152734A841007F538B /* SearchController.swift in Sources */,
 				9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */,
 				90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */,
 				90ECA3DA27335F91007F538B /* CustomImageViewComponentContainer.swift in Sources */,
@@ -544,6 +563,7 @@
 				90ECA40E27338073007F538B /* SearchResponseModel.swift in Sources */,
 				90ECA3F12733644A007F538B /* CollectionComponent.swift in Sources */,
 				90ECA3CB27335D94007F538B /* BaseView.swift in Sources */,
+				90ECA4132734A830007F538B /* SearchControllerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
