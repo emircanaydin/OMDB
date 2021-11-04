@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCardDisplayerCollectionViewCell: GenericCollectionViewCell<GenericDataProtocol, MovieCardView> {
+class MovieCardDisplayerCollectionCellView: GenericCollectionViewCell<GenericDataProtocol, MovieCardView> {
     
     override func setupView() {
         super.setupView()
