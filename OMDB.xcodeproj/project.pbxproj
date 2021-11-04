@@ -56,6 +56,9 @@
 		90ECA40127337D16007F538B /* MovieSearchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40027337D16007F538B /* MovieSearchServiceProvider.swift */; };
 		90ECA40427337D46007F538B /* SearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40327337D46007F538B /* SearchRequestModel.swift */; };
 		90ECA40727337E12007F538B /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40627337E12007F538B /* EndpointHelper.swift */; };
+		90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40927337F4B007F538B /* SearchOperationManagerProtocol.swift */; };
+		90ECA40E27338073007F538B /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40D27338073007F538B /* SearchResponseModel.swift */; };
+		90ECA41027338100007F538B /* SearchOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40F27338100007F538B /* SearchOperationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +108,9 @@
 		90ECA40027337D16007F538B /* MovieSearchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchServiceProvider.swift; sourceTree = "<group>"; };
 		90ECA40327337D46007F538B /* SearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestModel.swift; sourceTree = "<group>"; };
 		90ECA40627337E12007F538B /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
+		90ECA40927337F4B007F538B /* SearchOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManagerProtocol.swift; sourceTree = "<group>"; };
+		90ECA40D27338073007F538B /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
+		90ECA40F27338100007F538B /* SearchOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				90ECA3902731FDC8007F538B /* FirebaseRemoteConfigManager */,
 				90ECA3872731F9C6007F538B /* ConnectivityManager */,
 				90ECA3E027336157007F538B /* CacheManager */,
+				90ECA40827337F13007F538B /* SearchOperationManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -370,7 +377,8 @@
 		90ECA40227337D2F007F538B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				90ECA40327337D46007F538B /* SearchRequestModel.swift */,
+				90ECA40C27338002007F538B /* ResponseModels */,
+				90ECA40B27337FF8007F538B /* RequestModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +389,31 @@
 				90ECA40627337E12007F538B /* EndpointHelper.swift */,
 			);
 			path = EndpointHelper;
+			sourceTree = "<group>";
+		};
+		90ECA40827337F13007F538B /* SearchOperationManager */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40F27338100007F538B /* SearchOperationManager.swift */,
+				90ECA40927337F4B007F538B /* SearchOperationManagerProtocol.swift */,
+			);
+			path = SearchOperationManager;
+			sourceTree = "<group>";
+		};
+		90ECA40B27337FF8007F538B /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40327337D46007F538B /* SearchRequestModel.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		90ECA40C27338002007F538B /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40D27338073007F538B /* SearchResponseModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +519,7 @@
 				90ECA3DD27335F91007F538B /* CustomImageLoadingType.swift in Sources */,
 				90ECA3BE2732108A007F538B /* GenericValueProtocol.swift in Sources */,
 				90ECA3E627336272007F538B /* BaseCollectionViewCell.swift in Sources */,
+				90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */,
 				90ECA39A27320F60007F538B /* BaseViewController.swift in Sources */,
 				90ECA3D427335EB8007F538B /* OMDBColor.swift in Sources */,
 				90ECA3E227336173007F538B /* ImageCacheManager.swift in Sources */,
@@ -495,6 +529,7 @@
 				90ECA3C927335D7A007F538B /* GenericBaseView.swift in Sources */,
 				90ECA3BB27321035007F538B /* MainFont.swift in Sources */,
 				90ECA40727337E12007F538B /* EndpointHelper.swift in Sources */,
+				90ECA41027338100007F538B /* SearchOperationManager.swift in Sources */,
 				90ECA3F627336525007F538B /* UIView+Extensions.swift in Sources */,
 				90ECA3C42732135C007F538B /* SplashViewBuilder.swift in Sources */,
 				90ECA3942732018A007F538B /* FirebaseRemoteConfigManagerProtocol.swift in Sources */,
@@ -506,6 +541,7 @@
 				90ECA3DF273360B3007F538B /* GenericDataProtocol.swift in Sources */,
 				90ECA38F2731FC72007F538B /* SplashViewState.swift in Sources */,
 				90ECA3EF27336424007F538B /* CollectionComponentDelegate.swift in Sources */,
+				90ECA40E27338073007F538B /* SearchResponseModel.swift in Sources */,
 				90ECA3F12733644A007F538B /* CollectionComponent.swift in Sources */,
 				90ECA3CB27335D94007F538B /* BaseView.swift in Sources */,
 			);
