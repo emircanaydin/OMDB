@@ -51,6 +51,11 @@
 		90ECA3F3273364D2007F538B /* LoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3F2273364D2007F538B /* LoadingCellView.swift */; };
 		90ECA3F627336525007F538B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3F527336525007F538B /* UIView+Extensions.swift */; };
 		90ECA3F82733657D007F538B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA3F72733657D007F538B /* UICollectionView+Extensions.swift */; };
+		90ECA3FB2733770B007F538B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90ECA3FA2733770B007F538B /* RxSwift */; };
+		90ECA3FF27337CBF007F538B /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 90ECA3FE27337CBF007F538B /* DefaultNetworkOperationPackage */; };
+		90ECA40127337D16007F538B /* MovieSearchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40027337D16007F538B /* MovieSearchServiceProvider.swift */; };
+		90ECA40427337D46007F538B /* SearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40327337D46007F538B /* SearchRequestModel.swift */; };
+		90ECA40727337E12007F538B /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECA40627337E12007F538B /* EndpointHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +102,9 @@
 		90ECA3F2273364D2007F538B /* LoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellView.swift; sourceTree = "<group>"; };
 		90ECA3F527336525007F538B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		90ECA3F72733657D007F538B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		90ECA40027337D16007F538B /* MovieSearchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchServiceProvider.swift; sourceTree = "<group>"; };
+		90ECA40327337D46007F538B /* SearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestModel.swift; sourceTree = "<group>"; };
+		90ECA40627337E12007F538B /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +114,9 @@
 			files = (
 				903743A22731F2B90057AC6E /* FirebaseAnalytics in Frameworks */,
 				90ECA3C727321828007F538B /* Reachability in Frameworks */,
+				90ECA3FB2733770B007F538B /* RxSwift in Frameworks */,
 				903743A42731F2B90057AC6E /* FirebaseRemoteConfig in Frameworks */,
+				90ECA3FF27337CBF007F538B /* DefaultNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +146,8 @@
 				90ECA3CC27335DAF007F538B /* Components */,
 				90ECA38A2731FA7D007F538B /* SceneModules */,
 				90ECA3842731F7BF007F538B /* Managers */,
+				90ECA3FC27337C82007F538B /* ServiceProviders */,
+				90ECA40227337D2F007F538B /* Models */,
 				90ECA39B27320FD6007F538B /* Utilities */,
 				9037438C2731EA680057AC6E /* AppDelegate.swift */,
 				903743902731EA680057AC6E /* ViewController.swift */,
@@ -220,6 +232,7 @@
 			children = (
 				90ECA3BF273210F9007F538B /* AssetHelpers */,
 				90ECA3D227335EA6007F538B /* ColorHelper */,
+				90ECA40527337E03007F538B /* EndpointHelper */,
 				90ECA3F427336514007F538B /* Extensions */,
 				90ECA39C27320FE4007F538B /* FontHelper */,
 			);
@@ -346,6 +359,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		90ECA3FC27337C82007F538B /* ServiceProviders */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40027337D16007F538B /* MovieSearchServiceProvider.swift */,
+			);
+			path = ServiceProviders;
+			sourceTree = "<group>";
+		};
+		90ECA40227337D2F007F538B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40327337D46007F538B /* SearchRequestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		90ECA40527337E03007F538B /* EndpointHelper */ = {
+			isa = PBXGroup;
+			children = (
+				90ECA40627337E12007F538B /* EndpointHelper.swift */,
+			);
+			path = EndpointHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +403,8 @@
 				903743A12731F2B90057AC6E /* FirebaseAnalytics */,
 				903743A32731F2B90057AC6E /* FirebaseRemoteConfig */,
 				90ECA3C627321828007F538B /* Reachability */,
+				90ECA3FA2733770B007F538B /* RxSwift */,
+				90ECA3FE27337CBF007F538B /* DefaultNetworkOperationPackage */,
 			);
 			productName = OMDB;
 			productReference = 903743892731EA680057AC6E /* OMDB.app */;
@@ -398,6 +437,8 @@
 			packageReferences = (
 				903743A02731F2B90057AC6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				90ECA3C527321827007F538B /* XCRemoteSwiftPackageReference "Reachability" */,
+				90ECA3F92733770B007F538B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				90ECA3FD27337CBE007F538B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
 			);
 			productRefGroup = 9037438A2731EA680057AC6E /* Products */;
 			projectDirPath = "";
@@ -430,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ECA40127337D16007F538B /* MovieSearchServiceProvider.swift in Sources */,
 				90ECA3C127321107007F538B /* PageViewImages.swift in Sources */,
 				90ECA3ED273363F3007F538B /* CollectionComponentData.swift in Sources */,
 				90ECA38D2731FA8C007F538B /* SplashViewModel.swift in Sources */,
@@ -452,10 +494,12 @@
 				90ECA3DC27335F91007F538B /* CustomImageViewComponent.swift in Sources */,
 				90ECA3C927335D7A007F538B /* GenericBaseView.swift in Sources */,
 				90ECA3BB27321035007F538B /* MainFont.swift in Sources */,
+				90ECA40727337E12007F538B /* EndpointHelper.swift in Sources */,
 				90ECA3F627336525007F538B /* UIView+Extensions.swift in Sources */,
 				90ECA3C42732135C007F538B /* SplashViewBuilder.swift in Sources */,
 				90ECA3942732018A007F538B /* FirebaseRemoteConfigManagerProtocol.swift in Sources */,
 				90ECA3D127335E64007F538B /* MovieCardView.swift in Sources */,
+				90ECA40427337D46007F538B /* SearchRequestModel.swift in Sources */,
 				9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */,
 				90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */,
 				90ECA3DA27335F91007F538B /* CustomImageViewComponentContainer.swift in Sources */,
@@ -691,6 +735,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		90ECA3F92733770B007F538B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		90ECA3FD27337CBE007F538B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emircanaydin/DefaultNetworkOperationPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +768,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 90ECA3C527321827007F538B /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		90ECA3FA2733770B007F538B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90ECA3F92733770B007F538B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		90ECA3FE27337CBF007F538B /* DefaultNetworkOperationPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90ECA3FD27337CBE007F538B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
+			productName = DefaultNetworkOperationPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
