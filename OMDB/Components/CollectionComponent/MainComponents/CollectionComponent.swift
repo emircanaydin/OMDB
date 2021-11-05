@@ -59,6 +59,17 @@ class CollectionComponent: GenericBaseView<CollectionComponentData> {
         }
     }
     
+    func scrollToTop() {
+        DispatchQueue.main.async {
+            
+            guard self.delegate?.getItemCount(in: 0) ?? 0 > 0 else { return }
+            
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                              at: .top,
+                                        animated: true)
+        }
+    }
+    
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
         return delegate?.isLoadingCell(for: indexPath.row) ?? false
     }
@@ -79,10 +90,6 @@ class CollectionComponent: GenericBaseView<CollectionComponentData> {
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource -
 extension CollectionComponent: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return delegate?.getNumberOfSection() ?? 0
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return delegate?.getItemCount(in: section) ?? 0

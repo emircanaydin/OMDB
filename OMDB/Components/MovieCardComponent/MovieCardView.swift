@@ -56,6 +56,8 @@ class MovieCardView: GenericBaseView<GenericDataProtocol> {
         temp.text = " "
         temp.contentMode = .top
         temp.textAlignment = .left
+        temp.numberOfLines = 0
+        temp.lineBreakMode = .byWordWrapping
         return temp
     }()
     

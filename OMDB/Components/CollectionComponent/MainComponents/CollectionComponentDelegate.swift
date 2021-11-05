@@ -9,7 +9,6 @@ import Foundation
 
 protocol CollectionComponentDelegate: AnyObject {
     
-    func getNumberOfSection() -> Int
     func getItemCount(in section: Int) -> Int
     func getData(at index: Int) -> GenericDataProtocol?
     func getMoreData()

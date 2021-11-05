@@ -10,30 +10,17 @@ import UIKit
 
 class SearchController: BaseSearchController<SearchControllerData> {
     
-    private var searchWorkItem: DispatchWorkItem?
-    private var lastTerm = ""
-    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
-        self.searchResultsUpdater = self
+        self.searchBar.delegate = self
     }
 }
 
 // MARK: - UISearchResultsUpdating
-extension SearchController: UISearchResultsUpdating {
+extension SearchController: UISearchBarDelegate {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        
-        searchWorkItem?.cancel()
-        let term = searchController.searchBar.text ?? ""
-        
-        let newTask = DispatchWorkItem { [weak self] in
-            self?.lastTerm = term
-            self?.viewModel.textChangeListener?(term)
-        }
-        
-        self.searchWorkItem = newTask
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: newTask)
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        let term = searchBar.text ?? ""
+        viewModel.textChangeListener?(term)
     }
 }

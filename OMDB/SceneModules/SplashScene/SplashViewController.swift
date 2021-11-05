@@ -50,6 +50,7 @@ class SplashViewController: BaseViewController<SplashViewModel> {
             case .done(let splashText):
                 DispatchQueue.main.async {
                     self?.splashLabel.text = splashText
+                    self?.viewModel.fireApplicationInitiateProcess()
                 }
             }
         }

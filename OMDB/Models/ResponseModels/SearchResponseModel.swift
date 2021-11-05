@@ -8,10 +8,10 @@
 import Foundation
 
 struct SearchResponse: Codable {
-    let search: [SearchModel]
-    let totalResults: String
-    let response: String
-    let error: String
+    let search: [SearchModel]?
+    let totalResults: String?
+    let response: String?
+    let error: String?
 
     enum CodingKeys: String, CodingKey {
         case search = "Search"

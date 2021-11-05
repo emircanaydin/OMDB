@@ -8,6 +8,7 @@
 import Foundation
 
 typealias BaseUrl = EndpointHelper.BaseUrls
+typealias ApiKey = EndpointHelper.ApiKey
 
 enum EndpointHelper {
     
@@ -23,6 +24,20 @@ enum EndpointHelper {
         
         case ombd
         
+    }
+    
+    enum ApiKey: GenericValueProtocol {
+        
+        typealias Value = String
+        
+        var value: String {
+            switch self {
+            case .omdb:
+                return "bb150e2d"
+            }
+        }
+        
+        case omdb
     }
 
 }
