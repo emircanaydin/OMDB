@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias MovieDetailDataBlock = (MovieDetailViewData) -> Void
+
 class MovieDetailViewData {
     
     private(set) var headerViewData: MovieDetailHeaderViewData?

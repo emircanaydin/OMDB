@@ -11,6 +11,6 @@ import DefaultNetworkOperationPackage
 class MovieDetailServiceProvider: ApiServiceProvider<DetailRequestModel> {
     
     init(detailRequest: DetailRequestModel) {
-        super.init(method: .get, baseUrl: BaseUrl.ombd, data: detailRequest)
+        super.init(method: .get, baseUrl: BaseUrl.ombd.value, data: detailRequest)
     }
 }

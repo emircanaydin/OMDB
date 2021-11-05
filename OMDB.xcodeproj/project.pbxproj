@@ -17,6 +17,11 @@
 		906600032735D0E2002AC317 /* MovieDetailOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906600022735D0E2002AC317 /* MovieDetailOperationManagerProtocol.swift */; };
 		906600052735D139002AC317 /* MovieDetailOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906600042735D139002AC317 /* MovieDetailOperationManager.swift */; };
 		906600072735D1E3002AC317 /* MovieDetailServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906600062735D1E3002AC317 /* MovieDetailServiceProvider.swift */; };
+		9066000E2735D377002AC317 /* DetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906600092735D377002AC317 /* DetailInterfaces.swift */; };
+		9066000F2735D377002AC317 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066000A2735D377002AC317 /* DetailPresenter.swift */; };
+		906600102735D377002AC317 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066000B2735D377002AC317 /* DetailViewController.swift */; };
+		906600112735D377002AC317 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066000C2735D377002AC317 /* DetailInteractor.swift */; };
+		906600122735D377002AC317 /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066000D2735D377002AC317 /* DetailWireframe.swift */; };
 		9066E60F2734AACC009B3086 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E6092734AACB009B3086 /* BaseWireframe.swift */; };
 		9066E6102734AACC009B3086 /* FormatterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E60A2734AACB009B3086 /* FormatterInterface.swift */; };
 		9066E6112734AACC009B3086 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E60B2734AACB009B3086 /* UIStoryboardExtension.swift */; };
@@ -106,6 +111,11 @@
 		906600022735D0E2002AC317 /* MovieDetailOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailOperationManagerProtocol.swift; sourceTree = "<group>"; };
 		906600042735D139002AC317 /* MovieDetailOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailOperationManager.swift; sourceTree = "<group>"; };
 		906600062735D1E3002AC317 /* MovieDetailServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailServiceProvider.swift; sourceTree = "<group>"; };
+		906600092735D377002AC317 /* DetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaces.swift; sourceTree = "<group>"; };
+		9066000A2735D377002AC317 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		9066000B2735D377002AC317 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9066000C2735D377002AC317 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		9066000D2735D377002AC317 /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
 		9066E6092734AACB009B3086 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		9066E60A2734AACB009B3086 /* FormatterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterInterface.swift; sourceTree = "<group>"; };
 		9066E60B2734AACB009B3086 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
@@ -243,6 +253,18 @@
 			path = MovieDetailOperationManager;
 			sourceTree = "<group>";
 		};
+		906600082735D316002AC317 /* DetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				906600092735D377002AC317 /* DetailInterfaces.swift */,
+				9066000A2735D377002AC317 /* DetailPresenter.swift */,
+				9066000B2735D377002AC317 /* DetailViewController.swift */,
+				9066000C2735D377002AC317 /* DetailInteractor.swift */,
+				9066000D2735D377002AC317 /* DetailWireframe.swift */,
+			);
+			path = DetailScene;
+			sourceTree = "<group>";
+		};
 		9066E6082734AACB009B3086 /* BaseVIPERInterfaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,8 +365,9 @@
 		90ECA38A2731FA7D007F538B /* SceneModules */ = {
 			isa = PBXGroup;
 			children = (
-				9066E6152734AB22009B3086 /* MainScene */,
 				90ECA38B2731FA81007F538B /* SplashScene */,
+				9066E6152734AB22009B3086 /* MainScene */,
+				906600082735D316002AC317 /* DetailScene */,
 			);
 			path = SceneModules;
 			sourceTree = "<group>";
@@ -702,13 +725,16 @@
 				90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */,
 				9066FFEB273571B1002AC317 /* MovieDetailFooterView.swift in Sources */,
 				9066FFFC2735BD38002AC317 /* MovieDetailView.swift in Sources */,
+				906600122735D377002AC317 /* DetailWireframe.swift in Sources */,
 				9066E6292734AB94009B3086 /* MainPresenter.swift in Sources */,
 				9066FFE027356D62002AC317 /* GenericUICollectionReusableView.swift in Sources */,
 				90ECA39A27320F60007F538B /* BaseViewController.swift in Sources */,
 				9066E6102734AACC009B3086 /* FormatterInterface.swift in Sources */,
 				9066E62C2734AB94009B3086 /* MainInteractor.swift in Sources */,
+				9066000F2735D377002AC317 /* DetailPresenter.swift in Sources */,
 				90ECA3D427335EB8007F538B /* OMDBColor.swift in Sources */,
 				9066FFF627357575002AC317 /* MovieDetailInfoViewData.swift in Sources */,
+				9066000E2735D377002AC317 /* DetailInterfaces.swift in Sources */,
 				90ECA3E227336173007F538B /* ImageCacheManager.swift in Sources */,
 				9066FFE92735715D002AC317 /* MovieDetailFooterViewData.swift in Sources */,
 				9066E6312734B57A009B3086 /* MainViewDataState.swift in Sources */,
@@ -718,6 +744,7 @@
 				9066FFE627356ECC002AC317 /* MovieDetailHeaderView.swift in Sources */,
 				9066FFF427357562002AC317 /* MovieDetailInfoView.swift in Sources */,
 				90ECA3DC27335F91007F538B /* CustomImageViewComponent.swift in Sources */,
+				906600102735D377002AC317 /* DetailViewController.swift in Sources */,
 				9066E62F2734AD84009B3086 /* PaginationInfo.swift in Sources */,
 				9066E62A2734AB94009B3086 /* MainViewController.swift in Sources */,
 				9066E62D2734AB94009B3086 /* MainWireframe.swift in Sources */,
@@ -745,6 +772,7 @@
 				90ECA4152734A841007F538B /* SearchController.swift in Sources */,
 				9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */,
 				90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */,
+				906600112735D377002AC317 /* DetailInteractor.swift in Sources */,
 				90ECA3DA27335F91007F538B /* CustomImageViewComponentContainer.swift in Sources */,
 				90ECA3DF273360B3007F538B /* GenericDataProtocol.swift in Sources */,
 				90ECA38F2731FC72007F538B /* SplashViewState.swift in Sources */,
