@@ -37,10 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func fireMainView() {
-//        let mainView = MainViewBuilder.build()
-//
-//        window?.rootViewController = mainView
-//        window?.makeKeyAndVisible()
+        let mainViewController = MainWireframe().viewController
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }
 
