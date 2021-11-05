@@ -62,7 +62,7 @@ final class DetailPresenter {
     private func getDetailViewData(with movie: Movie) -> MovieDetailViewData {
         
         var infoDataList = [MovieDetailInfoViewData]()
-        infoDataList.append(MovieDetailInfoViewData(genre: movie.genre, plot: movie.plot))
+        infoDataList.append(MovieDetailInfoViewData(movieName: movie.title, movieYear: movie.year, genre: movie.genre, plot: movie.plot))
         
         return MovieDetailViewData()
             .setHeaderViewData(by: MovieDetailHeaderViewData(imageContainerData: CustomImageViewComponentData(imageUrl: movie.poster)))

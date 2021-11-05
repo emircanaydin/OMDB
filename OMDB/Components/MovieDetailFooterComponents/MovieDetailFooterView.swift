@@ -80,8 +80,7 @@ class MovieDetailFooterView: GenericBaseView<MovieDetailFooterViewData> {
         NSLayoutConstraint.activate([
         
             mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
         
         ])
@@ -92,9 +91,9 @@ class MovieDetailFooterView: GenericBaseView<MovieDetailFooterViewData> {
         super.loadDataToView()
         
         guard let data = returnData() else { return }
-        directorLabel.text = data.director
-        writersLabel.text = data.writers
-        actorsLabel.text = data.actors
-        releasedDateLabel.text = data.releasedDate
+        directorLabel.text = "Director: \(data.director)"
+        writersLabel.text = "Writers: \(data.writers)"
+        actorsLabel.text = "Actors: \(data.actors)"
+        releasedDateLabel.text = "Release Date: \(data.releasedDate)"
     }
 }

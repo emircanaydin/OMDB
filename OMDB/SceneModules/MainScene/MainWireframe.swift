@@ -31,10 +31,19 @@ final class MainWireframe: BaseWireframe<MainViewController> {
         let presenter = MainPresenter(view: moduleViewController, formatter: formatter, interactor: interactor, wireframe: self)
         moduleViewController.presenter = presenter
     }
+    
+    private func fireDetailView(with imdbId: String) {
+        let viewController = DetailWireframe(movieImdbId: imdbId).viewController
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
 }
 
 // MARK: - Extensions -
 
 extension MainWireframe: MainWireframeInterface {
+    
+    func goToDetailPage(with imdbId: String) {
+        fireDetailView(with: imdbId)
+    }
 }

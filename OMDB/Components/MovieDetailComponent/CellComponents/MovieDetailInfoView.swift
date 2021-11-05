@@ -10,12 +10,25 @@ import UIKit
 class MovieDetailInfoView: GenericBaseView<MovieDetailInfoViewData> {
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [genreLabel, plotLabel])
+        let temp = UIStackView(arrangedSubviews: [titleLabel, genreLabel, plotLabel])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.alignment = .leading
         temp.distribution = .fill
         temp.axis = .vertical
         temp.spacing = 10
+        return temp
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let temp = UILabel()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.textColor = .black
+        temp.text = " "
+        temp.lineBreakMode = .byWordWrapping
+        temp.numberOfLines = 0
+        temp.contentMode = .left
+        temp.textAlignment = .left
+        temp.font = MainFont.bold(32).value
         return temp
     }()
     
@@ -45,6 +58,11 @@ class MovieDetailInfoView: GenericBaseView<MovieDetailInfoViewData> {
         return temp
     }()
     
+    override func addMajorFields() {
+        super.addMajorFields()
+        addUserComponents()
+    }
+    
     private func addUserComponents() {
         addSubview(mainStackView)
         
@@ -63,6 +81,7 @@ class MovieDetailInfoView: GenericBaseView<MovieDetailInfoViewData> {
         super.loadDataToView()
         
         guard let data = returnData() else { return }
+        titleLabel.text = "\(data.movieName) - \(data.movieYear)"
         genreLabel.text = data.genre
         plotLabel.text = data.plot
     }

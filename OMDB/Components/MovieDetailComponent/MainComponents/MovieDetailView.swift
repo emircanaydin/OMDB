@@ -58,7 +58,9 @@ class MovieDetailView: GenericBaseView<MovieDetailViewData> {
     
     override func loadDataToView() {
         super.loadDataToView()
-        collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
     private func getNumberOfItems() -> Int {

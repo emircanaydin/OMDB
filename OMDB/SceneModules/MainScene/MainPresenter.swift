@@ -108,7 +108,7 @@ extension MainPresenter: MainPresenterInterface {
     }
     
     func selectedItem(at index: Int) {
-        // gotodetailpage
+        wireframe.goToDetailPage(with: formatter.getItemId(at: index))
     }
     
 }
