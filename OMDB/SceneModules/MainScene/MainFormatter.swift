@@ -36,10 +36,8 @@ extension MainFormatter: MainFormatterInterface {
     func setData(with response: SearchResponse) {
         
         if response.error == nil {
-            paginationInfo.isError = true
             paginationInfo.resultCount = response.search?.count ?? 0
         } else {
-            paginationInfo.isError = false
             paginationInfo.resultCount = 0
         }
         

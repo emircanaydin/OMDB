@@ -9,13 +9,12 @@ import Foundation
 
 struct PaginationInfo {
     var resultCount: Int = 0
-    var isError: Bool = false
     var page: Int = 1
     var fetching: Bool = false
     var limit: Int = 10
     
     func checkLoadingMore() -> Bool {
-        return limit <= resultCount && !isError && !fetching
+        return limit <= resultCount && !fetching
     }
     
     mutating func nextOffset() {
