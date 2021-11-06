@@ -12,7 +12,7 @@ import UIKit
 import RxSwift
 
 protocol MainWireframeInterface: WireframeInterface {
-    
+    func goToDetailPage(with imdbId: String)
 }
 
 protocol MainViewInterface: ViewInterface {
