@@ -24,9 +24,7 @@ class ConnectivityManager: ConnectivityManagerProtocol {
         
         do {
             try reachability.startNotifier()
-        } catch {
-            print("Unable to start notifier")
-        }
+        } catch {}
     }
     
     func stopMonitor() {
