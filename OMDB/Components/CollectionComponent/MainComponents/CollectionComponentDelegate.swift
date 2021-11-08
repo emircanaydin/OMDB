@@ -14,4 +14,9 @@ protocol CollectionComponentDelegate: AnyObject {
     func getMoreData()
     func isLoadingCell(for index: Int) -> Bool
     func selectedItem(at index: Int)
+    func isDataEmpty(in section: Int) -> Bool
+}
+
+extension CollectionComponentDelegate {
+    func isDataEmpty(in section: Int) -> Bool { return true }
 }
