@@ -27,7 +27,7 @@ class MovieDetailOperationManager: MovieDetailOperationManagerProtocol {
         
         do {
             let urlRequest = try MovieDetailServiceProvider(detailRequest: detailRequest).returnUrlRequest()
-            APIManager.shared.executeRequest(urlRequest: urlRequest, completion: apiCallHandler)
+            ApiManagerBuilder.build().executeRequest(urlRequest: urlRequest, completion: apiCallHandler)
         } catch _ {}
     }
     

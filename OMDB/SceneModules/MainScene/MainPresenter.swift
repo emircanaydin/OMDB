@@ -111,4 +111,10 @@ extension MainPresenter: MainPresenterInterface {
         wireframe.goToDetailPage(with: formatter.getItemId(at: index))
     }
     
+    func isDataEmpty(in section: Int) -> Bool {
+        guard formatter.getNumberOfItem(in: section) == 0 else { return false }
+        guard searchTerm.count > 0 else { return false }
+        return true
+    }
+    
 }

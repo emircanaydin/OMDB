@@ -30,9 +30,16 @@ class CollectionComponent: GenericBaseView<CollectionComponentData> {
         return collection
     }()
     
+    private var noResultView: NoResultView!
+    
     override func addMajorFields() {
         super.addMajorFields()
         addCollectionView()
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        setupBackgroundView()
     }
     
     private func addCollectionView() {
@@ -49,12 +56,22 @@ class CollectionComponent: GenericBaseView<CollectionComponentData> {
         
     }
     
+    private func setupBackgroundView() {
+        noResultView = NoResultView()
+        collectionView.backgroundView = noResultView
+    }
+    
+    private func noResultViewActivationControl() {
+        noResultView.activationManager(by: self.delegate?.isDataEmpty(in: 0) ?? false)
+    }
+    
     func setupDelegation(with delegate: CollectionComponentDelegate) {
         self.delegate = delegate
     }
     
     func reloadCollectionComponent() {
         DispatchQueue.main.async { [weak self] in
+            self?.noResultViewActivationControl()
             self?.collectionView.reloadData()
         }
     }

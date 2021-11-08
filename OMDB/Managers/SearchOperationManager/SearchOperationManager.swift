@@ -28,7 +28,7 @@ class SearchOperationManager: SearchOperationManagerProtocol {
         
         do {
             let urlRequest = try SearchServiceProvider(searchRequest: searchRequest).returnUrlRequest()
-            APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
+            ApiManagerBuilder.build().executeRequest(urlRequest: urlRequest, completion: completion)
         } catch _ {} // sry dont have error handler forgive me :(:(:(:(
     }
     

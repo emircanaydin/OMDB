@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90072AAF27398978003A79F2 /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AAE27398978003A79F2 /* NoResultView.swift */; };
+		90072AB127398992003A79F2 /* NoResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AB027398992003A79F2 /* NoResultViewData.swift */; };
+		90072AB427398C95003A79F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90072AB327398C95003A79F2 /* Lottie */; };
+		90072AB727398CB3003A79F2 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AB627398CB3003A79F2 /* LottieViewController.swift */; };
+		90072AB927398CBB003A79F2 /* loading_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 90072AB827398CBB003A79F2 /* loading_anim.json */; };
+		90072ABC27398CF4003A79F2 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072ABB27398CF4003A79F2 /* AtomicValue.swift */; };
+		90072AC027398D0F003A79F2 /* LottieManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072ABE27398D0F003A79F2 /* LottieManagerProtocol.swift */; };
+		90072AC127398D0F003A79F2 /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072ABF27398D0F003A79F2 /* LottieManager.swift */; };
+		90072AC427398D77003A79F2 /* ApiCallListenerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AC327398D77003A79F2 /* ApiCallListenerManager.swift */; };
+		90072AC627398DAB003A79F2 /* ApiManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AC527398DAB003A79F2 /* ApiManagerBuilder.swift */; };
+		90072AC827398E1D003A79F2 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90072AC727398E1D003A79F2 /* UIApplication+Extension.swift */; };
 		9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037438C2731EA680057AC6E /* AppDelegate.swift */; };
 		903743962731EA6E0057AC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903743952731EA6E0057AC6E /* Assets.xcassets */; };
 		903743992731EA6E0057AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903743972731EA6E0057AC6E /* LaunchScreen.storyboard */; };
@@ -102,6 +113,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90072AAE27398978003A79F2 /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
+		90072AB027398992003A79F2 /* NoResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultViewData.swift; sourceTree = "<group>"; };
+		90072AB627398CB3003A79F2 /* LottieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		90072AB827398CBB003A79F2 /* loading_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_anim.json; sourceTree = "<group>"; };
+		90072ABB27398CF4003A79F2 /* AtomicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		90072ABE27398D0F003A79F2 /* LottieManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieManagerProtocol.swift; sourceTree = "<group>"; };
+		90072ABF27398D0F003A79F2 /* LottieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		90072AC327398D77003A79F2 /* ApiCallListenerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallListenerManager.swift; sourceTree = "<group>"; };
+		90072AC527398DAB003A79F2 /* ApiManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerBuilder.swift; sourceTree = "<group>"; };
+		90072AC727398E1D003A79F2 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		903743892731EA680057AC6E /* OMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9037438C2731EA680057AC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903743952731EA6E0057AC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,12 +224,59 @@
 				90ECA3FB2733770B007F538B /* RxSwift in Frameworks */,
 				903743A42731F2B90057AC6E /* FirebaseRemoteConfig in Frameworks */,
 				90ECA3FF27337CBF007F538B /* DefaultNetworkOperationPackage in Frameworks */,
+				90072AB427398C95003A79F2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90072AAD2739893B003A79F2 /* NoResultView */ = {
+			isa = PBXGroup;
+			children = (
+				90072AAE27398978003A79F2 /* NoResultView.swift */,
+				90072AB027398992003A79F2 /* NoResultViewData.swift */,
+			);
+			path = NoResultView;
+			sourceTree = "<group>";
+		};
+		90072AB527398CAA003A79F2 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				90072ABD27398D0F003A79F2 /* LottieManager */,
+				90072ABA27398CF4003A79F2 /* AtomicType */,
+				90072AB627398CB3003A79F2 /* LottieViewController.swift */,
+				90072AB827398CBB003A79F2 /* loading_anim.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		90072ABA27398CF4003A79F2 /* AtomicType */ = {
+			isa = PBXGroup;
+			children = (
+				90072ABB27398CF4003A79F2 /* AtomicValue.swift */,
+			);
+			path = AtomicType;
+			sourceTree = "<group>";
+		};
+		90072ABD27398D0F003A79F2 /* LottieManager */ = {
+			isa = PBXGroup;
+			children = (
+				90072ABE27398D0F003A79F2 /* LottieManagerProtocol.swift */,
+				90072ABF27398D0F003A79F2 /* LottieManager.swift */,
+			);
+			path = LottieManager;
+			sourceTree = "<group>";
+		};
+		90072AC227398D5F003A79F2 /* ApiManagerModules */ = {
+			isa = PBXGroup;
+			children = (
+				90072AC327398D77003A79F2 /* ApiCallListenerManager.swift */,
+				90072AC527398DAB003A79F2 /* ApiManagerBuilder.swift */,
+			);
+			path = ApiManagerModules;
+			sourceTree = "<group>";
+		};
 		903743802731EA680057AC6E = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +301,7 @@
 				90ECA38A2731FA7D007F538B /* SceneModules */,
 				90ECA3842731F7BF007F538B /* Managers */,
 				90ECA3FC27337C82007F538B /* ServiceProviders */,
+				90072AB527398CAA003A79F2 /* Lottie */,
 				90ECA40227337D2F007F538B /* Models */,
 				90ECA39B27320FD6007F538B /* Utilities */,
 				9037438C2731EA680057AC6E /* AppDelegate.swift */,
@@ -344,6 +413,7 @@
 		90ECA3842731F7BF007F538B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				90072AC227398D5F003A79F2 /* ApiManagerModules */,
 				90ECA3902731FDC8007F538B /* FirebaseRemoteConfigManager */,
 				90ECA3872731F9C6007F538B /* ConnectivityManager */,
 				90ECA3E027336157007F538B /* CacheManager */,
@@ -519,6 +589,7 @@
 		90ECA3E727336286007F538B /* CollectionComponent */ = {
 			isa = PBXGroup;
 			children = (
+				90072AAD2739893B003A79F2 /* NoResultView */,
 				90ECA3EB273363E3007F538B /* MainComponents */,
 				90ECA3E827336326007F538B /* CellComponents */,
 			);
@@ -549,6 +620,7 @@
 			children = (
 				90ECA3F527336525007F538B /* UIView+Extensions.swift */,
 				90ECA3F72733657D007F538B /* UICollectionView+Extensions.swift */,
+				90072AC727398E1D003A79F2 /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -638,6 +710,7 @@
 				90ECA3C627321828007F538B /* Reachability */,
 				90ECA3FA2733770B007F538B /* RxSwift */,
 				90ECA3FE27337CBF007F538B /* DefaultNetworkOperationPackage */,
+				90072AB327398C95003A79F2 /* Lottie */,
 			);
 			productName = OMDB;
 			productReference = 903743892731EA680057AC6E /* OMDB.app */;
@@ -672,6 +745,7 @@
 				90ECA3C527321827007F538B /* XCRemoteSwiftPackageReference "Reachability" */,
 				90ECA3F92733770B007F538B /* XCRemoteSwiftPackageReference "RxSwift" */,
 				90ECA3FD27337CBE007F538B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
+				90072AB227398C95003A79F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 9037438A2731EA680057AC6E /* Products */;
 			projectDirPath = "";
@@ -690,6 +764,7 @@
 				90ECA3B627320FF9007F538B /* Roboto-Bold.ttf in Resources */,
 				90ECA3B427320FF9007F538B /* LICENSE.txt in Resources */,
 				90ECA3AE27320FF9007F538B /* Roboto-Regular.ttf in Resources */,
+				90072AB927398CBB003A79F2 /* loading_anim.json in Resources */,
 				90ECA3AC27320FF9007F538B /* Roboto-Medium.ttf in Resources */,
 				903743992731EA6E0057AC6E /* LaunchScreen.storyboard in Resources */,
 				903743962731EA6E0057AC6E /* Assets.xcassets in Resources */,
@@ -711,16 +786,20 @@
 				90ECA3892731F9DB007F538B /* ConnectivityManagerProtocol.swift in Sources */,
 				90ECA3CF27335DE2007F538B /* MovieCardData.swift in Sources */,
 				90ECA3922731FE1D007F538B /* FirebaseRemoteConfigManager.swift in Sources */,
+				90072AC827398E1D003A79F2 /* UIApplication+Extension.swift in Sources */,
 				90ECA39627320F39007F538B /* SplashViewController.swift in Sources */,
 				90ECA3E427336248007F538B /* GenericCollectionViewCell.swift in Sources */,
 				90ECA3DB27335F91007F538B /* CustomImageViewComponentData.swift in Sources */,
+				90072AC027398D0F003A79F2 /* LottieManagerProtocol.swift in Sources */,
 				9066E6132734AACC009B3086 /* ViewInterface.swift in Sources */,
 				90ECA3F3273364D2007F538B /* LoadingCellView.swift in Sources */,
 				9066E62B2734AB94009B3086 /* MainFormatter.swift in Sources */,
 				90ECA3DD27335F91007F538B /* CustomImageLoadingType.swift in Sources */,
+				90072AB127398992003A79F2 /* NoResultViewData.swift in Sources */,
 				90ECA3BE2732108A007F538B /* GenericValueProtocol.swift in Sources */,
 				90ECA4172734A86F007F538B /* BaseSearchController.swift in Sources */,
 				9066E6142734AACC009B3086 /* InteractorInterface.swift in Sources */,
+				90072ABC27398CF4003A79F2 /* AtomicValue.swift in Sources */,
 				90ECA3E627336272007F538B /* BaseCollectionViewCell.swift in Sources */,
 				90ECA40A27337F4B007F538B /* SearchOperationManagerProtocol.swift in Sources */,
 				9066FFEB273571B1002AC317 /* MovieDetailFooterView.swift in Sources */,
@@ -763,6 +842,8 @@
 				906600072735D1E3002AC317 /* MovieDetailServiceProvider.swift in Sources */,
 				9066FFED2735733C002AC317 /* MovieDetailFooterReusableView.swift in Sources */,
 				9066FFDC27356CD7002AC317 /* MovieDetailHeaderFlowLayout.swift in Sources */,
+				90072AC627398DAB003A79F2 /* ApiManagerBuilder.swift in Sources */,
+				90072AC127398D0F003A79F2 /* LottieManager.swift in Sources */,
 				90ECA3D127335E64007F538B /* MovieCardView.swift in Sources */,
 				906600052735D139002AC317 /* MovieDetailOperationManager.swift in Sources */,
 				9066FFFA2735BC88002AC317 /* MovieDetailViewData.swift in Sources */,
@@ -771,15 +852,18 @@
 				90ECA40427337D46007F538B /* SearchRequestModel.swift in Sources */,
 				90ECA4152734A841007F538B /* SearchController.swift in Sources */,
 				9037438D2731EA680057AC6E /* AppDelegate.swift in Sources */,
+				90072AC427398D77003A79F2 /* ApiCallListenerManager.swift in Sources */,
 				90ECA3862731F83E007F538B /* ConnectivityManager.swift in Sources */,
 				906600112735D377002AC317 /* DetailInteractor.swift in Sources */,
 				90ECA3DA27335F91007F538B /* CustomImageViewComponentContainer.swift in Sources */,
 				90ECA3DF273360B3007F538B /* GenericDataProtocol.swift in Sources */,
 				90ECA38F2731FC72007F538B /* SplashViewState.swift in Sources */,
+				90072AB727398CB3003A79F2 /* LottieViewController.swift in Sources */,
 				906600002735D095002AC317 /* DetailRequestModel.swift in Sources */,
 				90ECA3EF27336424007F538B /* CollectionComponentDelegate.swift in Sources */,
 				9066FFDE27356D16002AC317 /* BaseCollectionReusableView.swift in Sources */,
 				90ECA40E27338073007F538B /* SearchResponseModel.swift in Sources */,
+				90072AAF27398978003A79F2 /* NoResultView.swift in Sources */,
 				90ECA3F12733644A007F538B /* CollectionComponent.swift in Sources */,
 				90ECA3CB27335D94007F538B /* BaseView.swift in Sources */,
 				90ECA4132734A830007F538B /* SearchControllerData.swift in Sources */,
@@ -995,6 +1079,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		90072AB227398C95003A79F2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		903743A02731F2B90057AC6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1030,6 +1122,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		90072AB327398C95003A79F2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90072AB227398C95003A79F2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		903743A12731F2B90057AC6E /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 903743A02731F2B90057AC6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
